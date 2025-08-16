@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resgatando a Fé — Método Comprovado</title>
+<meta name="description" content="E-book prático que ajuda pais a reconectar seus filhos com a fé em 30 dias. Oferta limitada e bônus exclusivos!">
+<style>
+:root{
+  --verde:#2fa66f;
+  --azul:#1f6fb8;
+  --amarelo:#f6c84c;
+  --branco:#ffffff;
+  --cinza:#f5f7f9;
+  --texto:#1f2933;
+  --card-shadow:0 8px 25px rgba(31,41,51,0.08);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--branco),var(--cinza));color:var(--texto);-webkit-font-smoothing:antialiased;padding-top:70px;}
+.container{max-width:1100px;margin:0 auto;padding:28px;}
+#top-timer{
+  position:fixed;top:0;left:0;width:100%;background:var(--verde);color:white;text-align:center;padding:16px;font-weight:700;z-index:9999;font-size:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse{
+  0%{opacity:1;}
+  50%{opacity:0.85;}
+  100%{opacity:1;}
+}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;flex-wrap:wrap}
+.logo{display:flex;gap:12px;align-items:center}
+.logo .mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--verde),var(--azul));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+nav a{margin-left:14px;color:var(--texto);text-decoration:none;font-weight:600;transition:0.3s;}
+nav a:hover{color:var(--azul)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;margin-top:12px}
+.hero-card{background:var(--branco);padding:28px;border-radius:16px;box-shadow:var(--card-shadow)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(47,166,111,0.12);color:var(--verde);font-weight:700;font-size:13px}
+h1{margin:14px 0 6px;font-size:34px}
+p.lead{margin:0 0 16px;color:#425063;font-size:16px;line-height:1.5}
+.price{font-size:26px;font-weight:800;color:var(--azul)}
+.cta{display:inline-block;margin-top:14px;padding:14px 20px;border-radius:12px;background:linear-gradient(90deg,var(--verde),var(--azul));color:white;text-decoration:none;font-weight:800;transition:0.3s;cursor:pointer}
+.cta:hover{opacity:0.9}
+.cta.secondary{background:transparent;border:2px solid rgba(31,111,184,0.08);color:var(--azul);font-weight:700;margin-left:8px;transition:0.3s}
+.cta.secondary:hover{background:rgba(31,111,184,0.08);}
+
+/* Aside */
+.book-visual{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(31,111,184,0.06),rgba(47,166,111,0.03));padding:20px;text-align:center}
+.book-visual img{max-width:100%;height:auto;border-radius:8px}
+.author-box{margin-top:18px;background:white;padding:16px;border-radius:12px;box-shadow:var(--card-shadow);display:flex;gap:12px;align-items:center}
+
+/* Benefícios */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.benefit{background:white;padding:16px;border-radius:10px;box-shadow:var(--card-shadow);text-align:center;transition:0.3s}
+.benefit:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(31,41,51,0.15)}
+.benefit h4{margin:10px 0 6px;font-size:16px}
+.benefit p{margin:0;color:#556374;font-size:14px}
+
+/* Depoimentos */
+.testimonials{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.testi{background:linear-gradient(180deg,white, #fcfeff);padding:14px;border-radius:12px;box-shadow:var(--card-shadow)}
+.testi p{margin:6px 0;color:#334155;font-size:14px;line-height:1.4}
+.meta{display:flex;gap:12px;align-items:center}
+.meta img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+
+/* FAQ */
+.faq {
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq h3 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.faq details {
+  background: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px 20px;
+  color: #111827;
+  position: relative;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none; /* remove marcador padrão */
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  color: #10b981;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq p {
+  margin: 0;
+  padding: 14px 20px 18px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.5;
+  border-top: 1px solid #f3f4f6;
+  background: #f9fafb;
+}
+
+
+/* Garantia */
+.guarantee{margin-top:28px;background:#f0fdf4;padding:20px;border-radius:12px;text-align:center;color:#065f46;font-weight:700;font-size:16px}
+
+/* Bônus */
+.bonus-section{margin-top:28px;background:linear-gradient(90deg,var(--verde),var(--azul));padding:20px;border-radius:12px;color:white;text-align:center;font-size:15px}
+.bonus-section ul li{margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.bonus-section ul li::before{content:"🎁";}
+
+/* Footer */
+footer{margin:40px 0 12px;text-align:center;color:#6b7280}
+
+@media (max-width:1100px){.hero{grid-template-columns:1fr;}.benefits{grid-template-columns:repeat(2,1fr)}.testimonials{grid-template-columns:1fr}}
+@media (max-width:520px){.benefits{grid-template-columns:1fr}.logo .text{display:none}.hero{padding:0 6px}}
+.small-muted{font-size:13px;color:#718096}
+</style>
+</head>
+<body>
+  
+
+<!-- Timer -->
+<div id="top-timer">Oferta exclusiva: R$99,90 por apenas R$29,90 — termina em 10:00</div>
+
+<div class="container">
+<header>
+  <div class="logo">
+    <div class="mark">RF</div>
+    <div>
+      <div style="font-weight:800">Resgatando a Fé</div>
+      <div class="small-muted">Guia prático para pais | R$29,90</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#como">Como Funciona</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#comprar" class="small-muted">Comprar</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<main class="hero">
+<section class="hero-card">
+  <span class="badge">LANÇAMENTO</span>
+  <h1>Seus filhos estão se afastando da fé? Reconecte-os em 30 dias!</h1>
+  <p class="lead">Um método comprovado que transforma a relação da sua família com fé e amor. Orar, dialogar e criar rituais diários nunca foi tão simples.</p>
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div>
+      <div class="price">R$29,90 <span class="small-muted">(pagamento único)</span></div>
+      <div class="small-muted">PDF + Bônus exclusivos: como mudar a realidade familiar</div>
+    </div>
+    <div>
+      <a class="cta" id="buyNow" href="https://pay.kiwify.com.br/tDPsbm5" target="_blank">Quero meus filhos de volta na fé!</a>
+      <a class="cta secondary" href="#depoimentos">Ver depoimentos</a>
+    </div>
+  </div>
+  <div style="margin-top:18px;font-size:13px;color:#475569">Oferta limitada: apenas 50 unidades disponíveis hoje.</div>
+
+  <!-- Benefícios -->
+  <div class="benefits" style="margin-top:18px">
+    <div class="benefit"><strong>Plano de 30 dias</strong><p>Passo a passo diário, simples e direto ao ponto.</p></div>
+    <div class="benefit"><strong>Diálogos sem conflito</strong><p>Estratégias que abrem portas em vez de fechar.</p></div>
+    <div class="benefit"><strong>Rituais familiares</strong><p>Práticas pequenas que fortalecem fé e união.</p></div>
+  </div>
+</section>
+
+<!-- Aside com imagem e autor -->
+<aside>
+<div class="book-visual">
+  <img src="c:\Users\diniz\Downloads\meuEbookResetei.png" alt="Capa do e-book Resgatando a Fé">
+  <div style="margin-top:12px;font-weight:700">Resgatando a Fé</div>
+  <div style="margin-top:8px;color:#6b7280;font-size:14px">Guia prático para pais</div>
+  <div style="margin-top:10px"><a class="cta" id="buyNow2" href="https://pay.kiwify.com.br/tDPsbm5" target="_blank">Comprar por R$29,90</a>
+</div>
+
+<div class="author-box">
+  <img src="c:\Users\diniz\Downloads\pexels-ketut-subiyanto-4962562.jpg" alt="autor" style="width:64px;height:64px;border-radius:12px;object-fit:cover">
+  <div>
+    <div style="font-weight:800">Rafael.D</div>
+    <div class="small-muted">Autor & Mentor de Família</div>
+    <div style="margin-top:8px;font-size:14px;color:#475569">Especialista em aconselhamento familiar. Método direto, prático e testado em famílias reais.</div>
+  </div>
+</div>
+</aside>
+
+<!-- Depoimentos -->
+<section class="testimonials" id="depoimentos">
+<h2 style="margin-top:32px;font-size:24px;font-weight:800">O que pais reais dizem</h2>
+<div class="testi">
+<p>"Nunca imaginei que em apenas 30 dias veria tanta transformação na relação com meus filhos."</p>
+<div class="meta">
+  <img src="https://img.freepik.com/vetores-premium/ilustracao-plana-vetorial-em-escala-de-cinza-avatar-perfil-de-usuario-icone-de-pessoa_719432-2210.jpg" alt="foto">
+  <div>
+    <div style="font-weight:700">Ana S.</div>
+    <div class="small-muted">São Paulo, SP</div>
+  </div>
+</div>
+</div>
+<div class="testi">
+<p>"Agora conseguimos orar juntos e conversar sem brigas. Um verdadeiro milagre em casa!"</p>
+<div class="meta">
+  <img src="https://img.freepik.com/vetores-premium/ilustracao-plana-vetorial-em-escala-de-cinza-avatar-perfil-de-usuario-icone-de-pessoa_719432-2210.jpg" alt="foto">
+  <div>
+    <div style="font-weight:700">Carlos M.</div>
+    <div class="small-muted">Belo Horizonte, MG</div>
+  </div>
+</div>
+</div>
+<div class="testi">
+<p>"Minha filha voltou a rezar comigo todas as noites. Estou impressionada!"</p>
+<div class="meta">
+  <img src="https://img.freepik.com/vetores-premium/ilustracao-plana-vetorial-em-escala-de-cinza-avatar-perfil-de-usuario-icone-de-pessoa_719432-2210.jpg" alt="foto">
+  <div>
+    <div style="font-weight:700">Fernanda L.</div>
+    <div class="small-muted">Curitiba, PR</div>
+  </div>
+</div>
+</div>
+<div class="testi">
+<p>"Simples, direto e funciona. Recomendo para todos os pais que querem reconectar seus filhos."</p>
+<div class="meta">
+  <img src="https://img.freepik.com/vetores-premium/ilustracao-plana-vetorial-em-escala-de-cinza-avatar-perfil-de-usuario-icone-de-pessoa_719432-2210.jpg" alt="foto">
+  <div>
+    <div style="font-weight:700">Lucas R.</div>
+    <div class="small-muted">Porto Alegre, RS</div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Seção 30 dias -->
+<section id="como" style="margin-top:32px;">
+<h2 style="font-size:24px;font-weight:800">Transformação em 30 dias</h2>
+<ul style="margin-top:12px;line-height:1.6;">
+<li><strong>Dia 1:</strong> Inicie Projeto amoroso e diário de fé.</li>
+<li><strong>Dia 2:</strong> Faça uma oração conjunta de 5 minutos.</li>
+<li><strong>Dia 3:</strong> Introduza pequeno ritual familiar à noite.</li>
+<li>... até o Dia 30 com micro-hábitos e práticas progressivas.</li>
+</ul>
+</section>
+
+<!-- Bônus -->
+<div class="bonus-section">
+<h3>Bônus Exclusivos</h3>
+<ul style="text-align:left;display:inline-block;margin-top:10px;line-height:1.5;">
+<li>Valores Fundamentais para uma família unida — R$49,90</li>
+<li>Roteiro secreto de oração noturna — R$9,90</li>
+<li>Rezas Sagradas para a família — R$9,90</li>
+</ul>
+<p style="margin-top:12px;font-weight:700;">Somente hoje, junto com o e-book por R$29,90!</p>
+<a class="cta" href="https://pay.kiwify.com.br/tDPsbm5" target="_blank" 
+   style="margin-top:20px;display:inline-block;padding:20px 28px;font-size:20px;
+          background: linear-gradient(90deg, #2fa66f, #1f6fb8);
+          color:white; font-weight:900; border-radius:14px; text-decoration:none;
+          box-shadow:0 12px 30px rgba(31,41,51,0.25); transition:0.3s;
+          animation: pulseBtn 1.5s infinite alternate;">
+Comprar agora por R$29,90
+</a>
+
+<style>
+@keyframes pulseBtn {
+  0% { transform: scale(1); box-shadow:0 12px 30px rgba(31,41,51,0.25);}
+  50% { transform: scale(1.07); box-shadow:0 16px 40px rgba(31,41,51,0.35);}
+  100% { transform: scale(1); box-shadow:0 12px 30px rgba(31,41,51,0.25);}
+}
+</style>
+
+<!-- Garantia -->
+<div class="guarantee">
+Garantia de 7 dias: se você não notar diferença, devolvemos 100% do seu dinheiro. Sem perguntas.
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+<h3>Perguntas Frequentes</h3>
+<details><summary>Como meu filho irá reagir?</summary><p>O método é baseado em diálogo e pequenas ações diárias. A adaptação é natural e gradual.</p></details>
+<details><summary>O e-book é digital?</summary><p>Sim, você recebe PDF imediatamente após a compra e acesso aos bônus online.</p></details>
+<details><summary>Posso aplicar sozinho?</summary><p>Sim! É feito para qualquer pai ou mãe aplicar sem necessidade de experiência.</p></details>
+</section>
+
+<footer>© 2025 Rafael.D — Todos os direitos reservados</footer>
+</div>
+
+<script>
+// --- TIMER ---
+let timer=600; // 10 minutos
+const topTimerEl=document.getElementById('top-timer');
+function updateTimer(){
+  let min=Math.floor(timer/60).toString().padStart(2,'0');
+  let sec=(timer%60).toString().padStart(2,'0');
+  topTimerEl.innerHTML=`Oferta exclusiva: R$99,90 por apenas <strong>R$29,90</strong> — termina em ${min}:${sec}`;
+  if(timer<=0){topTimerEl.innerHTML='Oferta encerrada!';clearInterval(timerInterval);}
+  timer--;
+}
+const timerInterval=setInterval(updateTimer,1000);
+updateTimer();
+
+// --- NOTIFICAÇÕES ALEATÓRIAS ---
+const people = [
+  {name: "Maria", city: "SP"},
+  {name: "João", city: "RJ"},
+  {name: "Ana", city: "BH"},
+  {name: "Carlos", city: "POA"},
+  {name: "Beatriz", city: "BA"},
+  {name: "Lucas", city: "DF"},
+  {name: "Fernanda", city: "MG"},
+  {name: "Gabriel", city: "PR"}
+];
+const colors = ["#2fa66f","#1f6fb8","#f6c84c","#e67e22","#e74c3c","#9b59b6"];
+
+function showNotification(){
+  const notif=document.createElement('div');
+  const p=people[Math.floor(Math.random()*people.length)];
+  const minAgo=Math.floor(Math.random()*10)+1;
+  notif.innerHTML=`<strong>${p.name}</strong> de ${p.city} comprou o e-book há ${minAgo} minutos!`;
+  notif.style.position='fixed';
+  notif.style.bottom='20px';
+  notif.style.right='20px';
+  notif.style.background='white';
+  notif.style.padding='12px 18px';
+  notif.style.borderLeft=`4px solid ${colors[Math.floor(Math.random()*colors.length)]}`;
+  notif.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';
+  notif.style.borderRadius='8px';
+  notif.style.fontSize='14px';
+  notif.style.fontWeight='600';
+  notif.style.zIndex='9999';
+  notif.style.opacity='0';
+  notif.style.transition='opacity 0.6s, transform 0.6s';
+  document.body.appendChild(notif);
+  setTimeout(()=>{notif.style.opacity='1';notif.style.transform='translateY(-10px)';},100);
+  setTimeout(()=>{notif.style.opacity='0';notif.style.transform='translateY(0)';},4000);
+  setTimeout(()=>{notif.remove()},4600);
+}
+setInterval(showNotification,20000);
+</script>
+
+</body>
+</html>
